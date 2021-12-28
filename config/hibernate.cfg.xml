@@ -9,7 +9,7 @@
 
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 
-    <property name="connection.url">jdbc:mysql://localhost:3306/bank_db</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/taxion_db</property>
 
     <property name="connection.username">root</property>
 
@@ -27,10 +27,12 @@
 
 <!--    <mapping class="Student"/>-->
 <!--    <mapping resource="teacher.hbm.xml"/>-->
-        <mapping class ="session7.model.entity.User"/>
-        <mapping class ="session7.model.entity.Account"/>
-        <mapping class ="session7.model.entity.Update"/>
-        <mapping class ="session7.model.entity.Transaction"/>
+        <mapping class ="tamrintaxi.model.person.Driver"/>
+        <mapping class ="tamrintaxi.model.person.Passenger"/>
+        <mapping class ="tamrintaxi.model.person.User"/>
+        <mapping class ="tamrintaxi.model.trip.Trip"/>
+        <mapping class ="tamrintaxi.model.vehicle.Vehicle"/>
+        <mapping class ="tamrintaxi.TaxiManager"/>
 
 
 </session-factory>
