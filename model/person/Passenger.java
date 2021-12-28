@@ -5,17 +5,18 @@ import lombok.NoArgsConstructor;
 import tamrintaxi.enumaration.Gender;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Data
 @Entity
 @NoArgsConstructor
 public class Passenger extends User {
-    @Id
-
     private double accountBalance;
-    private Long id;
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected int id;
     public Passenger(String personalId, String firstName, String lastName, Gender gender, String phoneNumber, int birthYear, double accountBalance) {
         super(personalId, firstName, lastName, gender, phoneNumber, birthYear);
         this.accountBalance = accountBalance;
@@ -36,8 +37,5 @@ public class Passenger extends User {
                 ", accountBalance=" + accountBalance +
                 '}';
     }
-
-
-
 
 }

@@ -13,6 +13,8 @@ import javax.persistence.*;
 @Entity
 public class Driver extends User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected int id;
     @OneToOne
     private Vehicle vehicle;
     @Enumerated(value = EnumType.STRING)
@@ -35,4 +37,6 @@ public class Driver extends User {
                 ", location=" + location +
                 '}';
     }
+
+
 }
