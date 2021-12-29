@@ -2,6 +2,7 @@ package tamrintaxi.model.person;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import tamrintaxi.enumaration.Gender;
 
 import javax.persistence.Entity;
@@ -12,6 +13,8 @@ import javax.persistence.Id;
 @Data
 @Entity
 @NoArgsConstructor
+@ToString(callSuper = true)
+
 public class Passenger extends User {
     private double accountBalance;
     @Id

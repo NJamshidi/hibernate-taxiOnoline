@@ -13,8 +13,8 @@ import javax.persistence.*;
 public abstract class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected int id;
-    protected String personalId;
+    public int id;
+    public String personalId;
     protected String firstName;
     protected String lastName;
     @Enumerated(value = EnumType.STRING)
@@ -23,7 +23,7 @@ public abstract class User {
     protected int birthYear;
     protected int age;
     @Enumerated(value = EnumType.STRING)
-    protected UserStatus userStatus;
+    public UserStatus userStatus;
 
     public User(String personalId, String firstName, String lastName, Gender gender, String phoneNumber, int birthYear) {
         this.personalId = personalId;
